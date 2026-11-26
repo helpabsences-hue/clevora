@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <body style="margin:0;padding:24px;background:#F1F5F9;font-family:Inter,Segoe UI,Arial,sans-serif">
+    <div style="max-width:520px;margin:0 auto;background:#ffffff;border-radius:16px;padding:32px">
+      <p style="margin:0 0 24px"><img src="{{ .SiteURL }}/brand/parcolia-email.png" width="185" height="48" alt="Parcolia" style="display:block;border:0;height:48px;width:185px;font-size:24px;font-weight:800;color:#054570"></p>
+      {{ if eq .Data.locale "ar" }}
+      <div dir="rtl" style="text-align:right">
+      <h1 style="margin:0 0 12px;font-size:22px;color:#054570">أكّد بريدك الإلكتروني</h1>
+      <p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#334155">مرحبًا بك في Parcolia! اضغط على الزر لتأكيد بريدك الإلكتروني والدخول إلى وكالتك.</p>
+      <p style="margin:0 0 24px"><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email&amp;next={{ .RedirectTo }}" style="display:inline-block;background:#054570;color:#ffffff;text-decoration:none;font-weight:600;font-size:16px;padding:14px 24px;border-radius:10px">تأكيد البريد الإلكتروني</a></p>
+      <p style="margin:0;font-size:13px;color:#64748b">Parcolia — وكالة الكراء ديالك، ببساطة.</p>
+    </div>
+      {{ else if eq .Data.locale "en" }}
+      <div dir="ltr" style="text-align:left">
+      <h1 style="margin:0 0 12px;font-size:22px;color:#054570">Confirm your email address</h1>
+      <p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#334155">Welcome to Parcolia! Click the button to confirm your email address and open your agency.</p>
+      <p style="margin:0 0 24px"><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email&amp;next={{ .RedirectTo }}" style="display:inline-block;background:#054570;color:#ffffff;text-decoration:none;font-weight:600;font-size:16px;padding:14px 24px;border-radius:10px">Confirm my email</a></p>
+      <p style="margin:0;font-size:13px;color:#64748b">Parcolia — your rental agency, made simple.</p>
+    </div>
+      {{ else }}
+      <div dir="ltr" style="text-align:left">
+      <h1 style="margin:0 0 12px;font-size:22px;color:#054570">Confirmez votre adresse e-mail</h1>
+      <p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#334155">Bienvenue sur Parcolia ! Cliquez sur le bouton pour confirmer votre adresse e-mail et accéder à votre agence.</p>
+      <p style="margin:0 0 24px"><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email&amp;next={{ .RedirectTo }}" style="display:inline-block;background:#054570;color:#ffffff;text-decoration:none;font-weight:600;font-size:16px;padding:14px 24px;border-radius:10px">Confirmer mon e-mail</a></p>
+      <p style="margin:0;font-size:13px;color:#64748b">Parcolia — la gestion de votre agence de location, simplement.</p>
+    </div>
+      {{ end }}
+    </div>
+  </body>
+</html>

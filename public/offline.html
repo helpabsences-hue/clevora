@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parcolia — hors connexion</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; min-height: 100dvh; display: grid; place-items: center; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #F8FAFC; color: #0F172A; }
+  @media (prefers-color-scheme: dark) { body { background: #0B1120; color: #E2E8F0; } p { color: #94A3B8 !important; } }
+  main { max-width: 26rem; padding: 1.5rem; text-align: center; }
+  img { width: 64px; height: 64px; border-radius: 14px; }
+  h1 { font-size: 1.5rem; margin: 1rem 0 .5rem; }
+  p { color: #475569; line-height: 1.5; margin: .25rem 0; }
+  [dir=rtl] { font-family: system-ui, "Noto Sans Arabic", sans-serif; }
+  button { margin-top: 1.25rem; min-height: 48px; padding: 0 1.5rem; border: 0; border-radius: 12px; background: #1E2A4A; color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; }
+</style>
+</head>
+<body>
+<main>
+  <img src="/icons/icon-192.png" alt="Parcolia">
+  <h1>Pas de connexion Internet</h1>
+  <p>Vérifiez le Wi-Fi ou les données mobiles, puis réessayez. Vos brouillons de réservation sont gardés sur ce téléphone.</p>
+  <p dir="rtl" lang="ar">لا يوجد اتصال بالإنترنت. تحقق من الويفي أو بيانات الهاتف ثم أعد المحاولة.</p>
+  <p lang="en">No internet connection. Check Wi-Fi or mobile data, then try again.</p>
+  <button type="button" onclick="location.reload()">Réessayer · إعادة المحاولة</button>
+</main>
+</body>
+</html>
